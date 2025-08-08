@@ -23,7 +23,7 @@ global.utils = {
   }
 };
 
-mongoose.connect("PASTE_YOUR_MONGODB_URI_HERE", {
+mongoose.connect("paste_mongo_uri_here", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
