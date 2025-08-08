@@ -117,7 +117,7 @@ function setupMessageListener(api) {
 
       const matchedBadWord = badWords.find(word => lowered.includes(word));
       if (matchedBadWord) {
-        const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); // 24 hrs
+        const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000); 
         await BlockModel.findOneAndUpdate(
           { userID: senderID, threadID },
           {
