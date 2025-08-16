@@ -21,7 +21,7 @@ module.exports.config = {
   version: '1.1.7',
   hasPermission: 0,
   usePrefix: false,
-  aliases: ['gpt', 'lorex'],
+  aliases: ['gpt', 'keijo'],
   description: "An AI command powered by Gemini Vision",
   usages: "ai [prompt]",
   credits: 'LorexAi',
@@ -73,7 +73,7 @@ module.exports.run = async function({ api, event, args }) {
   }
 
   // === GPT-4o TEXT MODE ===
-  if (!input) return api.sendMessage("❌ Please provide a prompt.", threadID, messageID);
+  if (!input) return api.sendMessage("Yup, 𝐊𝐞𝐢𝐣𝐨 𝐀𝐢 ako! 😎 Nandito ako para tulungan ka sa mga tanong, gawain, o kahit na pag-uusap lang. Anong gusto mo gawin o pag-usapan?🥰", threadID, messageID);
 
   const tempMsg = await sendTemp(api, threadID, "🔄 Generating...");
 
