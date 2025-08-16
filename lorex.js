@@ -23,7 +23,7 @@ global.utils = {
   }
 };
 
-mongoose.connect("mongodb+srv://markjoshuaduerme14:Markpogi@casidy.c7fcu4e.mongodb.net/?retryWrites=true&w=majority&appName=casidy", {
+mongoose.connect("mongodb+srv://markjoshuaduerme14:@casidy.c7fcu4e.mongodb.net/?retryWrites=true&w=majority&appName=casidy", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
