@@ -21,7 +21,7 @@ module.exports.config = {
 };
 
 module.exports.run = async function({ api, event, args }) {
-  const adminID = ["100070741922384"]; // ← Palitan mo ito ng iyong main account UID
+  const adminID = ["61579032975023"]; // ← Palitan mo ito ng iyong main account UID
   const senderID = event.senderID;
 
   if (!adminID.includes(senderID)) {
