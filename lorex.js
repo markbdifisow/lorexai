@@ -23,7 +23,7 @@ global.utils = {
   }
 };
 
-mongoose.connect("paste_mongo_uri_here", {
+mongoose.connect("mongodb+srv://markjoshuaduerme14:KLB9ZJ8Z7JGHMB19@casidy.c7fcu4e.mongodb.net/?retryWrites=true&w=majority&appName=casidy", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -57,9 +57,9 @@ function handleJoinNoti(event, api) {
   const added = event.logMessageData?.addedParticipants || [];
 
   if (added.some(p => p.userFbId === api.getCurrentUserID())) {
-    api.changeNickname('► 𝑳𝒐𝒓𝒆𝒙 𝑨𝒊 ◄', threadID, api.getCurrentUserID());
+    api.changeNickname('► 𝑲𝒆𝒊𝒋𝒐 𝑨𝒊 ◄', threadID, api.getCurrentUserID());
     return api.sendMessage({
-      body: "━━━━━━━━━━━━━\n\n✪Bot Connected ✅\n\nHello! I am 𝗟𝗼𝗿𝗲𝘅 𝗔𝗶, an Educational A.I. Companion Chatbot. Thank you for adding me here!\n\nMy commands are:\n\n𝗮𝗶, 𝗮𝗶𝟮\n\n━━━━━━━━━━━━━"
+      body: "━━━━━━━━━━━━━\n\n✪Bot Connected ✅\n\nHello! I am 𝗞𝗲𝗶𝗷𝗼 𝗔𝗶, an Educational A.I. Companion Chatbot. Thank you for adding me here!\n\nMy commands are:\n\n𝗮𝗶, 𝗮𝗶𝟮\n\n━━━━━━━━━━━━━"
     }, threadID);
   }
 
@@ -67,7 +67,7 @@ function handleJoinNoti(event, api) {
     api.getThreadInfo(threadID).then(({ threadName, participantIDs }) => {
       const ordinal = getOrdinal(participantIDs.length);
       const nameArray = added.map(p => p.fullName);
-      let msg = "✪ Hello {name}!\n\nWelcome!, You're the {ordinal} Member of {threadName} Group. Please Enjoy Your Stay And Make Lots Of Friends 🥳😍";
+      let msg = "✪ Hello buddy {name}!\n\nWelcome po!, You're the {ordinal} Member of {threadName} Group. Please Enjoy Your Stay And Make Lots Of Friends 🥳😍";
       msg = msg.replace(/\{name}/g, nameArray.join(', '))
                .replace(/\{ordinal}/g, ordinal)
                .replace(/\{threadName}/g, threadName);
